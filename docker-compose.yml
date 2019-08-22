@@ -1,7 +1,6 @@
-version: '2'
+version: "2"
 
 services:
-
   elasticsearch:
     build:
       context: elasticsearch/
@@ -45,12 +44,16 @@ services:
       - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
     ports:
       - "5601:5601"
+    environment:
+      VIRTUAL_HOST: logs.lennonalves.com.br
+      VIRTUAL_PORT: 5601
+      LETSENCRYPT_HOST: logs.lennonalves.com.br
+      LETSENCRYPT_EMAIL: lennonalvesdias@gmail.com"
     networks:
       - elk
     depends_on:
       - elasticsearch
 
 networks:
-
   elk:
     driver: bridge
