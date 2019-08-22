@@ -65,7 +65,7 @@ Other available stack variants:
 * 1.5 GB of RAM
 
 By default, the stack exposes the following ports:
-* 5000: Logstash TCP input
+* 5001: Logstash TCP input
 * 9200: Elasticsearch HTTP
 * 9300: Elasticsearch TCP transport
 * 5601: Kibana
@@ -159,7 +159,7 @@ Now that the stack is running, you can go ahead and inject some log entries. The
 you to send content via TCP:
 
 ```console
-$ nc localhost 5000 < /path/to/logfile.log
+$ nc localhost 5001 < /path/to/logfile.log
 ```
 
 You can also load the sample data provided by your Kibana installation.
