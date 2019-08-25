@@ -58,3 +58,5 @@ services:
 networks:
   elk:
     driver: bridge
+  nginx-proxy:
+    driver: bridge
