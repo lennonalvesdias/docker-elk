@@ -59,5 +59,4 @@ networks:
   elk:
     driver: bridge
   nginx-proxy:
-    driver: bridge
     external: true
