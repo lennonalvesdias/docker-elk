@@ -16,6 +16,7 @@ services:
       ELASTIC_PASSWORD: lead4857
     networks:
       - elk
+      - nginx-proxy
 
   logstash:
     build:
@@ -32,6 +33,7 @@ services:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
       - elk
+      - nginx-proxy
     depends_on:
       - elasticsearch
 
